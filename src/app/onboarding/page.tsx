@@ -1,9 +1,9 @@
 import React from 'react';
-import LoginView from '@/feature/auth/LoginView';
+import OnboardingView from '@/feature/auth/OnboardingView';
 
 const page = () => {
     return (
-        <LoginView />
+        <OnboardingView />
     );
 };
 
