@@ -1,3 +1,6 @@
+import { Button } from "components/button";
+import { Input } from "components/input";
+import { Label } from "components/label";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,53 +23,36 @@ const RegisterView = () => {
         <div className="flex flex-col gap-y-16">
           <div className="flex flex-col gap-y-6">
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Nama Lengkap <span className="text-red-500">*</span></label>
-              <input
-                type="text"
-                placeholder="Tuliskan nama kamu"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Nama Lengkap</Label>
+              <Input placeholder="Tuliskan nama kamu" type="text" />
             </div>
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Nomor Telepon <span className="text-red-500">*</span></label>
-              <input
-                type="text"
-                placeholder="Tuliskan nomor telepon kamu"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Nomor Telepon</Label>
+              <Input placeholder="Tuliskan nomor telepon kamu" type="text" />
             </div>
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Email <span className="text-red-500">*</span></label>
-              <input
-                type="text"
-                placeholder="Tuliskan email kamu"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Email</Label>
+              <Input placeholder="Tuliskan email kamu" type="text" />
             </div>
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Kata Sandi <span className="text-red-500">*</span></label>
-              <input
-                type="password"
-                placeholder="Tuliskan kata sandi"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Kata Sandi</Label>
+              <Input placeholder="Tuliskan kata sandi" type="password" />
             </div>
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Ulangi Kata Sandi <span className="text-red-500">*</span></label>
-              <input
-                type="password"
-                placeholder="Tuliskan ulang kata sandi"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Ulangi Kata Sandi</Label>
+              <Input placeholder="Tuliskan ulang kata sandi" type="password" />
             </div>
           </div>
           <div className="flex flex-col gap-y-4 items-center justify-between">
-            <button className="bg-primary h-14 w-full text-white font-bold rounded-lg">
+            <Button>
               Daftar
-            </button>
+            </Button>
+            {/* <button className="bg-primary h-14 w-full text-white font-bold rounded-lg">
+              Daftar
+            </button> */}
             <p className="text-neutral-5">
               Sudah punya akun?{" "}
-              <Link href={"/login"} className="text-primary font-bold">
+              <Link href={"/login"} className="link">
                 Masuk
               </Link>
             </p>

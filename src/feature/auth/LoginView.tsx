@@ -1,3 +1,6 @@
+import { Button } from "components/button";
+import { Input } from "components/input";
+import { Label } from "components/label";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,20 +23,12 @@ const LoginView = () => {
         <div className="flex flex-col gap-y-16">
           <div className="flex flex-col gap-y-6">
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Email <span className="text-red-500">*</span></label>
-              <input
-                type="text"
-                placeholder="Tuliskan email kamu"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Email</Label>
+              <Input placeholder="Tuliskan email kamu" type="text" />
             </div>
             <div className="flex flex-col gap-y-2">
-              <label className="font-medium tracking-tight">Kata Sandi <span className="text-red-500">*</span></label>
-              <input
-                type="password"
-                placeholder="Tuliskan kata sandi"
-                className="w-full text-sm rounded-lg border-[1.5px] border-gray-300 p-[14px] focus:border-primary outline-none"
-              />
+              <Label isMarked>Kata Sandi</Label>
+              <Input placeholder="Tuliskan kata sandi" type="password" />
               <div className="flex items-center justify-between">
                 <p className="font-medium">Ingat saya</p>
                 <Link href={"/"} className="text-primary font-semibold">
@@ -43,12 +38,12 @@ const LoginView = () => {
             </div>
           </div>
           <div className="flex flex-col gap-y-4 items-center justify-between">
-            <button className="bg-primary h-14 w-full text-white font-bold rounded-lg">
+            <Button>
               Masuk
-            </button>
+            </Button>
             <p className="text-neutral-5">
               Belum punya akun?{" "}
-              <Link href={"/register"} className="text-primary font-bold">
+              <Link href={"/register"} className="link">
                 Daftar
               </Link>
             </p>
