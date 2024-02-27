@@ -1,10 +1,9 @@
-import LoginView from '@/feature/auth/LoginView'
-import React from 'react'
+import React from "react";
+
+import LoginView from "@/feature/auth/LoginView";
 
 const page = () => {
-  return (
-    <LoginView />
-  )
-}
+  return <LoginView />;
+};
 
-export default page
+export default page;

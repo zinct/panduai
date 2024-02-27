@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DM_Sans } from 'next/font/google';
+import { DM_Sans } from "next/font/google";
+
 import "@/core/styles/global.css";
 
 export const metadata: Metadata = {
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const DMSans = DM_Sans({
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export default function RootLayout({

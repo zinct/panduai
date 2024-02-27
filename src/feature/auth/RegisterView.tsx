@@ -1,5 +1,14 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "components/button";
+import { Input } from "components/input";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+
 import {
   Form,
   FormControl,
@@ -8,15 +17,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "components/button";
-import { Input } from "components/input";
-import { Label } from "components/label";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
 
 const registerFormSchema = z
   .object({
@@ -61,7 +61,7 @@ const RegisterView = () => {
         <div className="mx-auto flex items-center flex-col gap-2">
           <Image
             alt="panduai logo"
-            src={"/images/logo.png"}
+            src="/images/logo.png"
             width={180}
             height={52}
           />
@@ -168,7 +168,7 @@ const RegisterView = () => {
             </button> */}
               <p className="text-neutral-5">
                 Sudah punya akun?{" "}
-                <Link href={"/login"} className="link">
+                <Link href="/login" className="link">
                   Masuk
                 </Link>
               </p>

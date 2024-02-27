@@ -1,7 +1,7 @@
 "use client";
 
+import { type VariantProps, cva } from "class-variance-authority";
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "utils/cn";
 
 const labelVariants = cva(
@@ -20,7 +20,7 @@ const Label = React.forwardRef<
   return (
     <div>
       <label ref={ref} className={cn(labelVariants(), className)} {...rest} />
-      {isMarked ? (<span className="text-red-500"> *</span>) : null}
+      {isMarked ? <span className="text-red-500"> *</span> : null}
     </div>
   );
 });

@@ -1,11 +1,16 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 const OnboardingView = () => {
   return (
     <div className="h-screen grid grid-cols-2">
       <div className="flex flex-col gap-y-5 bg-white py-48 px-40">
-        <Image alt="panduai logo" src={"/images/logo.png"} width={240} height={240} />
+        <Image
+          alt="panduai logo"
+          src="/images/logo.png"
+          width={240}
+          height={240}
+        />
         <p className="text-[18px] text-neutral-5">
           Masuk sebagai guru untuk mengajar atau murid untuk belajar
         </p>
