@@ -3,30 +3,34 @@
 import { Separator } from "@/components/separator";
 import SidebarItem from "@/components/sidebar/sidebar-item";
 import SidebarProfile from "@/components/sidebar/sidebar-profile";
-import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { BiSolidDashboard } from "react-icons/bi";
+import { BsFillBookmarkDashFill } from "react-icons/bs";
+import { IoChatbubbleEllipses } from "react-icons/io5";
+import { RiCompassFill } from "react-icons/ri";
 
 const SIDEBAR_ITEMS = [
   {
     name: "Dashboard",
     href: "dashboard",
-    icon: <Icon icon="mage:dashboard-fill" width="20" height="24" />,
+    // icon: <Icon icon="mage:dashboard-fill" width="20" height="24" />,
+    icon: <BiSolidDashboard size={"20"} />,
   },
   {
     name: "Kelas",
     href: "kelas",
-    icon: <Icon icon="solar:bookmark-bold" width="20" height="24" />,
+    icon: <BsFillBookmarkDashFill size={"20"} />,
   },
   {
     name: "PanduAjar",
     href: "pandu-ajar",
-    icon: <Icon icon="solar:compass-bold" width="20" height="24" />,
+    icon: <RiCompassFill size={"20"} />,
   },
   {
     name: "ChatAI",
     href: "chat-ai",
-    icon: <Icon icon="bi:chat-dots-fill" width="20" height="24" />,
+    icon: <IoChatbubbleEllipses size={"20"} />,
   },
 ];
 
@@ -61,7 +65,7 @@ export default function AppLayout({
         </div>
         <SidebarProfile />
       </nav>
-      <div className="px-8 pt-8">{children}</div>
+      <div className="px-8 pt-8 w-full">{children}</div>
     </section>
   );
 }

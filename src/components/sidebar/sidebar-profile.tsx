@@ -1,5 +1,5 @@
-import { Icon } from "@iconify/react";
 import React from "react";
+import { RiSettings3Fill } from "react-icons/ri";
 
 const SidebarProfile = () => {
   return (
@@ -12,7 +12,7 @@ const SidebarProfile = () => {
   /> */}
       <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
       <h5 className="font-medium">Nisrina Thifal</h5>
-      <Icon icon="solar:settings-bold" width="24" height="24" />
+      <RiSettings3Fill size="24" />
       {/* https://api.dicebear.com/7.x/adventurer-neutral/svg?seed=yaa */}
     </div>
   );
