@@ -43,7 +43,7 @@ export default function AppLayout({
   return (
     <section className="bg-[#F6F7FB] flex">
       {/* Include shared UI here e.g. a header or sidebar */}
-      <nav className="w-64 h-screen py-6 bg-white flex flex-col">
+      <nav className="w-72 h-screen py-6 bg-white flex flex-col sticky top-0">
         <div className="flex-grow">
           <Image
             className="ml-6"
