@@ -65,7 +65,7 @@ export default function AppLayout({
         </div>
         <SidebarProfile />
       </nav>
-      <div className="px-8 pt-8 w-full">{children}</div>
+      <div className="p-8 w-full">{children}</div>
     </section>
   );
 }

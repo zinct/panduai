@@ -14,7 +14,7 @@ const SidebarItem = ({ href, name, icon, currentPath }: Props) => {
     <Link
       href={href}
       key={name}
-      className={`flex items-center justify-between pl-10 text-gray-600 font-medium gap-4 h-14 ${
+      className={`flex items-center justify-between pl-10 text-neutral-5 font-medium gap-4 h-14 ${
         currentPath === href
           ? "bg-secondary-accent !font-bold text-primary "
           : "hover:bg-gray-100"
